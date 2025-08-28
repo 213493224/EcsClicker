@@ -27,8 +27,8 @@ namespace Systems
         public void Init(IEcsSystems systems)
         {
             _filter = _world.Filter<PowerUp>().Inc<Unlocked>().End();
-            _balanceView = _uiRoot.hud.GetComponentInChildren<BalanceView>();
-            _powerUpViewList = _uiRoot.hud.GetComponentsInChildren<PowerUpView>().ToList();
+            _balanceView = _uiRoot.Hud.GetComponentInChildren<BalanceView>();
+            _powerUpViewList = _uiRoot.Hud.GetComponentsInChildren<PowerUpView>().ToList();
             _powerUpPool = _world.GetPool<PowerUp>();
         }
 

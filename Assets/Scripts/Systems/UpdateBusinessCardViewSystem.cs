@@ -26,7 +26,7 @@ namespace Systems
         {
             _filter = _world.Filter<BusinessCard>().Inc<UpdateComponentViewEvent>().End();
             _businessCardPool = _world.GetPool<BusinessCard>();
-            _businessCardViewList = _uiRoot.hud.GetComponentsInChildren<BusinessCardView>().ToList();
+            _businessCardViewList = _uiRoot.Hud.GetComponentsInChildren<BusinessCardView>().ToList();
         }
 
         public void Run(IEcsSystems systems)

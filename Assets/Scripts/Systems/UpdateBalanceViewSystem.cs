@@ -24,7 +24,7 @@ namespace Systems
         public void Init(IEcsSystems systems)
         {
             _filter = _world.Filter<UpdateComponentViewEvent>().End();
-            _balanceView = _uiRoot.hud.GetComponentInChildren<BalanceView>();
+            _balanceView = _uiRoot.Hud.GetComponentInChildren<BalanceView>();
         }
 
         public void Run(IEcsSystems systems)

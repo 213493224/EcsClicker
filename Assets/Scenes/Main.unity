@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9553cf0b48f12b740af23fd898b8ad49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiRoot: {fileID: 1446862069}
+  _uiRoot: {fileID: 1446862069}
 --- !u!4 &496592204
 Transform:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6529381352950403411, guid: f38d5d9da2a1781418a95ccbc44df99c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.00036621094
       objectReference: {fileID: 0}
     - target: {fileID: 7181561056835505134, guid: f38d5d9da2a1781418a95ccbc44df99c, type: 3}
       propertyPath: m_Name
@@ -499,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8087849802629048159, guid: f38d5d9da2a1781418a95ccbc44df99c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -84.65441
+      value: -84.6543
       objectReference: {fileID: 0}
     - target: {fileID: 8908536030655596141, guid: f38d5d9da2a1781418a95ccbc44df99c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -566,9 +566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130bb9ef0b9c4ed0ae8370d799728f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  businessCardContainer: {fileID: 908965888}
-  hud: {fileID: 24996898}
-  ScrollRect: {fileID: 1172130240}
+  _businessCardContainer: {fileID: 908965888}
+  _hud: {fileID: 24996898}
+  _scrollRect: {fileID: 1172130240}
 --- !u!4 &1446862070
 Transform:
   m_ObjectHideFlags: 0
