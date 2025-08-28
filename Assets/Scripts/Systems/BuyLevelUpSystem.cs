@@ -39,10 +39,10 @@ namespace Systems
 
                 var balance = _factory.Balance;
 
-                if(!Extentions.HasEnoughBalance(balance, levelUpPrice))
+                if(!Extensions.HasEnoughBalance(balance, levelUpPrice))
                 {
                     continue;
-                };
+                }
 
                 balance.SpendBalance(levelUpPrice);
 

@@ -48,7 +48,7 @@ namespace Systems
                     continue; 
                 }
 
-                if(!Extentions.HasEnoughBalance(balance, powerUp.Price))
+                if(!Extensions.HasEnoughBalance(balance, powerUp.Price))
                 {
                     continue;
                 };

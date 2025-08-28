@@ -5,7 +5,7 @@ using Services;
 
 namespace Core
 {
-    public static class Extentions
+    public static class Extensions
     {
         public static bool HasEnoughBalance(this Balance balance, float price)
         {

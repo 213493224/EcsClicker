@@ -10,7 +10,7 @@ namespace Core
 {
     internal class EcsStartup : MonoBehaviour
     {
-        [SerializeField] private UiRoot uiRoot;
+        [SerializeField] private UiRoot _uiRoot;
         private IGameFactory _factory;
         private PlayerProgress _playerProgress;
         private ISaveLoadService _saveLoadService;
@@ -63,7 +63,7 @@ namespace Core
                 ?? _saveLoadService.NewProgress();
 
             _uiClickEventSystem = new UiClickEventSystem();
-            _factory = new GameFactory(_world, uiRoot, _playerProgress, _staticDataService, _uiClickEventSystem);
+            _factory = new GameFactory(_world, _uiRoot, _playerProgress, _staticDataService, _uiClickEventSystem);
         }
 
         private void InitSystems()
@@ -74,9 +74,9 @@ namespace Core
                 .Add(new IncomeSystem(_world, _factory, _staticDataService))
                 .Add(new BuyPowerUpSystem(_world, _factory, _staticDataService))
                 .Add(new BuyLevelUpSystem(_world, _factory, _staticDataService))
-                .Add(new UpdateBalanceViewSystem(_world, _factory, uiRoot))
-                .Add(new UpdateBusinessCardViewSystem(_world, uiRoot))
-                .Add(new UpdatePowerUpViewSystem(_world, _factory, uiRoot))
+                .Add(new UpdateBalanceViewSystem(_world, _factory, _uiRoot))
+                .Add(new UpdateBusinessCardViewSystem(_world, _uiRoot))
+                .Add(new UpdatePowerUpViewSystem(_world, _factory, _uiRoot))
                 .Add(new UpdateSliderSystem(_world, _factory))
                 .Add(new SaveGameSystem(_world, _saveLoadService, _factory))
 

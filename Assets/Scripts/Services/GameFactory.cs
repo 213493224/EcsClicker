@@ -13,14 +13,14 @@ namespace Services
 {
     internal class GameFactory : IGameFactory
     {
+        private readonly EcsWorld _world;
+        private readonly UiRoot _uiRoot;
         private readonly PlayerProgress _progress;
         private readonly IStaticDataService _staticDataService;
         private readonly UiClickEventSystem _uiClickEventSystem;
-        private readonly UiRoot _uiRoot;
-        private readonly EcsWorld _world;
 
         public Balance Balance { get; private set; }
-        public Dictionary<int, BusinessCardView> ViewById { get; private set;}
+        public Dictionary<int, BusinessCardView> ViewById { get; private set; }
 
         public GameFactory(EcsWorld world, UiRoot uiRootRoot, PlayerProgress progress,
             IStaticDataService staticDataService, UiClickEventSystem uiClickEventSystem)
@@ -40,7 +40,7 @@ namespace Services
                 Value = _progress.BalanceData.Value
             };
 
-            var balanceView = _uiRoot.hud.GetComponentInChildren<BalanceView>();
+            var balanceView = _uiRoot.Hud.GetComponentInChildren<BalanceView>();
             balanceView.BalanceLabel.text = _staticDataService.ForHud().BalanceLabel.AsLabel();
             balanceView.Value.text = Balance.Value.AsCurrency();
         }
@@ -76,7 +76,7 @@ namespace Services
                 : businessCard.IncomeDelay;
 
             var businessCardObj = (GameObject)Object.Instantiate(Resources.Load(AssetPath.BusinessCard),
-                _uiRoot.businessCardContainer);
+                _uiRoot.BusinessCardContainer);
 
             var businessCardView = businessCardObj.GetComponent<BusinessCardView>();
 

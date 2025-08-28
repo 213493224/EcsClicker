@@ -5,16 +5,18 @@ namespace UnityComponents
 {
     public class UiRoot : MonoBehaviour
     {
-        public Transform businessCardContainer;
-        public GameObject hud;
-        
-        public ScrollRect ScrollRect;
+        [SerializeField] private Transform _businessCardContainer;
+        [SerializeField] private GameObject _hud;
+        [SerializeField] private ScrollRect _scrollRect;
+
+        public Transform BusinessCardContainer => _businessCardContainer;
+        public GameObject Hud => _hud;
 
         public void ResetScrollToTop()
         {
-            if (ScrollRect != null)
+            if (_scrollRect != null)
             {
-                ScrollRect.verticalNormalizedPosition = 1f;
+                _scrollRect.verticalNormalizedPosition = 1f;
             }
         }
     }
